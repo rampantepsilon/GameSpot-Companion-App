@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img src='/assets/articles.png'>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class='getstart'>
+  <ion-text>
+    <h2 align='center'>{{name}}</h2>
+  </ion-text>
+  <div *ngFor = 'let titles of title; let i = index' id='test'>
+    <ion-card>
+      <img src='{{image[i]}}'>
+      <ion-card-header>
+        <ion-card-title color='light'><a href='{{link[i]}}'>{{titles}}</a></ion-card-title>
+        <ion-card-subtitle color='light'>{{author[i]}}</ion-card-subtitle>
+        <ion-card-content>{{lede[i]}}</ion-card-content>
+      </ion-card-header>
+    </ion-card>
+  </div>
+</ion-content>

@@ -11,10 +11,12 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
-  {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  { path: 'articles', loadChildren: './articles/articles.module#ArticlesPageModule' },
+  { path: 'reviews', loadChildren: './reviews/reviews.module#ReviewsPageModule' },
+  { path: 'releases', loadChildren: './releases/releases.module#ReleasesPageModule' },
+  //Added Paged for potential sorting of releases
+  { path: 'top', loadChildren: './reviews/top/top.module#TopPageModule' },
+  { path: 'worst', loadChildren: './reviews/worst/worst.module#WorstPageModule' }
 ];
 
 @NgModule({

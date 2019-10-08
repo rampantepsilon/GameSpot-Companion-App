@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img src='/assets/releases.png'>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class='getstart'>
+  <ion-text>
+    <h2 align='center'>{{loading}}</h2>
+  </ion-text>
+  <div *ngFor = 'let names of name; let i = index'>
+    <table width='100%'>
+      <tr>
+        <td class='ion-padding'>
+          <table width='100%'>
+            <tr>
+              <td width='75%' valign='top'>
+                <h3>{{names}}</h3>
+              </td>
+              <td align='center'>
+                <div [innerHTML]='release_date[i]'></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5>{{region[i]}}</h5>
+              </td>
+              <td align='center'>
+                <div [innerHTML]='platform[i]'></div>
+              </td>
+            </tr>
+            <tr>
+              <td align='center' colspan='2'>
+                {{splitter[i]}}
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</ion-content>

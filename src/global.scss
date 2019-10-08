@@ -24,3 +24,26 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+:root {
+  --ion-background-color: rgba(0,0,0,0);
+  --ion-text-color:#ffffff;
+  --ion-label-color:#fff;
+}
+
+.getstart, ion-header, ion-content{
+  background-image: url('/assets/background.png');
+}
+
+ion-card-content{
+  color:#fff;
+}
+
+a, a:visited{
+  font-size: .8em;
+  color:#fff;
+}
+
+.ion-padding {
+  padding: 15px;
+}
